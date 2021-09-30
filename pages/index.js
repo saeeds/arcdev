@@ -1,7 +1,6 @@
 import React from "react";
 import ReactGA from "react-ga";
 import Head from "next/head";
-import Lottie from "react-lottie";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Link from "../src/Link";
 import Grid from "@material-ui/core/Grid";
@@ -13,8 +12,6 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 
 import CallToAction from "../src/ui/CallToAction";
-
-import animationData from "../src/animations/landinganimation/data";
 
 import {
   LazyLoadImage,
@@ -138,14 +135,7 @@ export default function LandingPage(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: false,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  };
+
 
   return (
     <Grid container direction="column" className={classes.mainContainer}>
@@ -217,7 +207,7 @@ export default function LandingPage(props) {
             </Grid>
           </Grid>
           <Grid sm item className={classes.animation}>
-            <Lottie options={defaultOptions} height={"100%"} width={"100%"} />
+
           </Grid>
         </Grid>
       </Grid>
